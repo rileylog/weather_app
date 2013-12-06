@@ -1,12 +1,20 @@
+GIT
+  remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
+  revision: 9c6c07f74ff515cf38380b014cfede14a4f0eae4
+  branch: 3
+  specs:
+    bootstrap-sass (3.0.0.0)
+      sass (~> 3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
-    actionmailer (3.2.14)
-      actionpack (= 3.2.14)
+    actionmailer (3.2.15)
+      actionpack (= 3.2.15)
       mail (~> 2.5.4)
-    actionpack (3.2.14)
-      activemodel (= 3.2.14)
-      activesupport (= 3.2.14)
+    actionpack (3.2.15)
+      activemodel (= 3.2.15)
+      activesupport (= 3.2.15)
       builder (~> 3.0.0)
       erubis (~> 2.7.0)
       journey (~> 1.0.4)
@@ -14,18 +22,18 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.2.1)
-    activemodel (3.2.14)
-      activesupport (= 3.2.14)
+    activemodel (3.2.15)
+      activesupport (= 3.2.15)
       builder (~> 3.0.0)
-    activerecord (3.2.14)
-      activemodel (= 3.2.14)
-      activesupport (= 3.2.14)
+    activerecord (3.2.15)
+      activemodel (= 3.2.15)
+      activesupport (= 3.2.15)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
-    activeresource (3.2.14)
-      activemodel (= 3.2.14)
-      activesupport (= 3.2.14)
-    activesupport (3.2.14)
+    activeresource (3.2.15)
+      activemodel (= 3.2.15)
+      activesupport (= 3.2.15)
+    activesupport (3.2.15)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     addressable (2.3.5)
@@ -37,8 +45,6 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (2.3.2.2)
-      sass (~> 3.2)
     builder (3.0.4)
     cancan (1.6.10)
     capybara (2.2.0)
@@ -120,18 +126,18 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    rails (3.2.14)
-      actionmailer (= 3.2.14)
-      actionpack (= 3.2.14)
-      activerecord (= 3.2.14)
-      activeresource (= 3.2.14)
-      activesupport (= 3.2.14)
+    rails (3.2.15)
+      actionmailer (= 3.2.15)
+      actionpack (= 3.2.15)
+      activerecord (= 3.2.15)
+      activeresource (= 3.2.15)
+      activesupport (= 3.2.15)
       bundler (~> 1.0)
-      railties (= 3.2.14)
+      railties (= 3.2.15)
     rails_layout (0.5.6)
-    railties (3.2.14)
-      actionpack (= 3.2.14)
-      activesupport (= 3.2.14)
+    railties (3.2.15)
+      actionpack (= 3.2.15)
+      activesupport (= 3.2.15)
       rack-ssl (~> 1.3.2)
       rake (>= 0.8.7)
       rdoc (~> 3.4)
@@ -187,7 +193,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
-  bootstrap-sass (~> 2.3.2.2)
+  bootstrap-sass!
   cancan
   capybara
   coffee-rails (~> 3.2.1)
@@ -201,7 +207,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   quiet_assets
-  rails (= 3.2.14)
+  rails (= 3.2.15)
   rails_layout
   rolify
   rspec-rails
