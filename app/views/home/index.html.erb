@@ -1,4 +1,24 @@
-<h3>Home</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
-<% end %>
+<div class='post-tile col-xs-12 col-sm-6 col-md-6 no-gutters' >
+  <div id="googleMap"></div>
+</div>
+
+<div class='post-tile col-xs-12 col-sm-6 col-md-6 no-gutters' >
+  <h3> Search for weather by location</h3>
+  <div class='row'>
+    <div class='col-xs-8'>
+      <input class="form-control" id="address" type="textbox" placeholder="Input a city/state">
+    </div>
+    <div class='col-xs-4'>
+      <input type="button" class='btn btn-primary' value="Get Weather" onclick="codeAddress()">
+    </div>  
+  </div>
+  <% latitude, longitude = @ip_info['loc'].split(',') %>
+  <% if @ip_info %>
+    <br />
+    <br />
+    <br />
+    <div id='weather_div' >
+      <iframe id="forecast_embed" type="text/html" frameborder="0" height="245px" width="100%" src="http://forecast.io/embed/#lat=<%= latitude %>&lon=<%= longitude %>&name=<%= @ip_info['city'] %>&color=#004B76&font=Helvetica"> </iframe>
+    </div>
+  <% end %>
+</div>

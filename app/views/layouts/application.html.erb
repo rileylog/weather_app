@@ -1,31 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <title>Logan's Stuff</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Weather App" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Weather App" %>">
-    <%= stylesheet_link_tag "application", media: "all" %>
+
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <script src="http://maps.googleapis.com/maps/api/js?key=<%= ENV['Google_Map_Key'] %>&sensor=false"> </script>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <%# application layout styled for Twitter Bootstrap 2.3 %>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-      <div class="container">
-        <div class="content">
-           <div class="row">
-            <div class="span12">
-              <%= render 'layouts/messages' %>
-              <%= yield %>
-            </div>
-          </div>
-          <footer>
-          </footer>
-        </div>
+    <%= render 'layouts/navigation' %>
+    <div id='main' role='main'>
+      <div class='container'>  
+        <%= render 'layouts/messages' %>
+        <%= yield %>
       </div>
-    </main>
+    </div>
   </body>
 </html>

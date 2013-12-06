@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @users = User.all
+    @ip_info = IpInfo.new().get_ip_info
   end
 end
