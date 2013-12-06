@@ -12,10 +12,69 @@ var mapProp = {
   mapTypeId:google.maps.MapTypeId.ROADMAP,
   styles: [
     {
-        "featureType": "road",
+        "featureType": "landscape",
         "stylers": [
             {
-                "visibility": "off"
+                "saturation": -100
+            },
+            {
+                "lightness": 65
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 51
+            },
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 30
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 40
+            },
+            {
+                "visibility": "on"
             }
         ]
     },
@@ -23,7 +82,10 @@ var mapProp = {
         "featureType": "transit",
         "stylers": [
             {
-                "visibility": "off"
+                "saturation": -100
+            },
+            {
+                "visibility": "simplified"
             }
         ]
     },
@@ -36,48 +98,32 @@ var mapProp = {
         ]
     },
     {
-        "featureType": "poi.park",
-        "elementType": "geometry",
+        "featureType": "water",
+        "elementType": "labels",
         "stylers": [
             {
-                "visibility": "off"
+                "visibility": "on"
+            },
+            {
+                "lightness": -25
+            },
+            {
+                "saturation": -100
             }
         ]
     },
     {
         "featureType": "water",
+        "elementType": "geometry",
         "stylers": [
             {
-                "color": "#004b76"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape.natural",
-        "stylers": [
-            {
-                "visibility": "on"
+                "hue": "#ffff00"
             },
             {
-                "color": "#fff6cb"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.country",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "visibility": "on"
+                "lightness": -25
             },
             {
-                "color": "#7f7d7a"
-            },
-            {
-                "lightness": 10
-            },
-            {
-                "weight": 1
+                "saturation": -97
             }
         ]
     }

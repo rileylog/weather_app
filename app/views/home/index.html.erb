@@ -1,4 +1,9 @@
+<div class='title col-md-12 no-gutters' >
+  <h1> <center><span class="label label-default">The Weather Clicker</span></center> </h1>
+</div>
+<br />
 <div class='post-tile col-xs-12 col-sm-6 col-md-6 no-gutters' >
+  <h3> Click Anywhere on Planet Earth for the Current Weather</h3>
   <div id="googleMap"></div>
 </div>
 
@@ -18,7 +23,7 @@
     <br />
     <br />
     <div id='weather_div' >
-      <iframe id="forecast_embed" type="text/html" frameborder="0" height="245px" width="100%" src="http://forecast.io/embed/#lat=<%= latitude %>&lon=<%= longitude %>&name=<%= @ip_info['city'] %>&color=#004B76&font=Helvetica"> </iframe>
+      <iframe id="forecast_embed" type="text/html" frameborder="0" height="245px" width="100%" src="http://forecast.io/embed/#lat=<%= latitude %>&lon=<%= longitude %>&name=<%= @ip_info['city'] %>&color=#A6A6A0&font=Helvetica"> </iframe>
     </div>
   <% end %>
 </div>
