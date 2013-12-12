@@ -12,69 +12,10 @@ var mapProp = {
   mapTypeId:google.maps.MapTypeId.ROADMAP,
   styles: [
     {
-        "featureType": "landscape",
+        "featureType": "road",
         "stylers": [
             {
-                "saturation": -100
-            },
-            {
-                "lightness": 65
-            },
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "stylers": [
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 51
-            },
-            {
-                "visibility": "simplified"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "stylers": [
-            {
-                "saturation": -100
-            },
-            {
-                "visibility": "simplified"
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "stylers": [
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 30
-            },
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "road.local",
-        "stylers": [
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 40
-            },
-            {
-                "visibility": "on"
+                "visibility": "off"
             }
         ]
     },
@@ -82,10 +23,7 @@ var mapProp = {
         "featureType": "transit",
         "stylers": [
             {
-                "saturation": -100
-            },
-            {
-                "visibility": "simplified"
+                "visibility": "off"
             }
         ]
     },
@@ -98,36 +36,53 @@ var mapProp = {
         ]
     },
     {
-        "featureType": "water",
-        "elementType": "labels",
+        "featureType": "poi.park",
+        "elementType": "geometry",
         "stylers": [
             {
-                "visibility": "on"
-            },
-            {
-                "lightness": -25
-            },
-            {
-                "saturation": -100
+                "visibility": "off"
             }
         ]
     },
     {
         "featureType": "water",
-        "elementType": "geometry",
         "stylers": [
             {
-                "hue": "#ffff00"
+                "color": "#004b76"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.natural",
+        "stylers": [
+            {
+                "visibility": "on"
             },
             {
-                "lightness": -25
+                "color": "#fff6cb"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.country",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
             },
             {
-                "saturation": -97
+                "color": "#7f7d7a"
+            },
+            {
+                "lightness": 10
+            },
+            {
+                "weight": 1
             }
         ]
     }
 ]
+
   };
 
 window.map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
@@ -166,6 +121,7 @@ var create_new_iframe = function(latitude_param, longitude_param, name_param){
 
 function addPoint(event) {
   clearOverlays();
+  console.log (event)
   var latlngpoint = event.latLng;
   // main_marker = new google.maps.Marker({
   //   position: latlngpoint,
@@ -173,11 +129,11 @@ function addPoint(event) {
   // })
   // main_marker = marker;
   var url = 'http://forecast.io/embed/#';
-  var latitude_param = latlngpoint.pb;
-  var longitude_param = latlngpoint.qb;
+  var latitude_param = latlngpoint.nb;
+  var longitude_param = latlngpoint.ob;
   // var weather_div = $('#weather_div');
   // var new_iframe = $('<iframe></iframe>');
-  var latlng = new google.maps.LatLng(latlngpoint.pb, latlngpoint.qb);
+  var latlng = new google.maps.LatLng(latlngpoint.nb, latlngpoint.ob);
   create_new_iframe(latitude_param, longitude_param, null);
   // var create_new_iframe = function(){
   //   weather_div.html('');
@@ -215,7 +171,7 @@ function codeAddress() {
           position: results[0].geometry.location
       });
       // city_name1 = results[0].geometry.location;
-      create_new_iframe(results[0].geometry.location.pb, results[0].geometry.location.qb, address);
+      create_new_iframe(results[0].geometry.location.nb, results[0].geometry.location.ob, address);
     } 
   });
 }
