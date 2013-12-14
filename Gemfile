@@ -7,6 +7,7 @@ gem 'devise'
 gem 'figaro'
 gem 'rolify'
 gem 'simple_form'
+gem "activeadmin", :git => "git://github.com/gregbell/active_admin.git"
 
 group :assets do
   gem 'sass-rails', '>= 3.2'
