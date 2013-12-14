@@ -15,6 +15,11 @@ group :assets do
   gem 'bootstrap-sass', '~> 3.0.3.0'
 end
 
+group :production do
+  gem 'pg'
+end
+
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
@@ -27,14 +32,4 @@ group :development, :test do
   gem "sqlite3", "~> 1.3.7", :require => "sqlite3"
 end
 
-group :development, :test do
-  gem 'factory_girl_rails'
-  gem 'rspec-rails'
-end
-group :test do
-  gem 'capybara'
-  gem 'cucumber-rails', :require=>false
-  gem 'database_cleaner', '1.0.1'
-  gem 'email_spec'
-  gem 'launchy'
-end
+
