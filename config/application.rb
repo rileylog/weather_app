@@ -9,11 +9,11 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-config.assets.initialize_on_precompile = true
+
 
 module WeatherApp
   class Application < Rails::Application
-
+    config.assets.initialize_on_precompile = false
     # don't generate RSpec tests for views and helpers
     config.generators do |g|
       
