@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 gem 'rails', '3.2.15'
-gem 'sqlite3'
 gem 'jquery-rails'
 gem 'cancan'
 gem 'devise'
@@ -23,6 +22,11 @@ group :development do
   gem 'quiet_assets'
   gem 'rails_layout'
 end
+
+group :development, :test do
+  gem "sqlite3", "~> 1.3.7", :require => "sqlite3"
+end
+
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
