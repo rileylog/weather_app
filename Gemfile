@@ -10,10 +10,10 @@ gem 'rolify'
 gem 'simple_form'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
+  gem 'sass-rails', '>= 3.2'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
-  gem "bootstrap-sass", github: "thomas-mcdonald/bootstrap-sass", branch: '3'
+  gem 'bootstrap-sass', '~> 3.0.3.0'
 end
 
 group :development do
