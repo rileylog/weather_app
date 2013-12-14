@@ -1,4 +1,4 @@
-$font-size-base: 16px;
+$font-size-base: 13px;
 $font-family-base: Helvetica;
 $navbar-height: 50px;
 $navbar-default-bg: $primary-color;
@@ -6,11 +6,13 @@ $navbar-default-color: lighten($primary-color, 80%);
 $navbar-default-link-color: $navbar-default-color;
 $navbar-default-link-hover-color: darken($navbar-default-color, 10%);
 
-$btn-primary-bg: darken($primary-color, 10%);
+$btn-primary-bg: $primary-color;
 $btn-primary-color: $navbar-default-link-color;
 $jumbotron-color: $primary-color;
 $jumbotron-padding: 10px;
-$label-default-bg: #004B76;
+$jumbotron-heading-color: $primary-color;
+$label-default-bg: darken(#EEEEEE, 5%);
+$page-header-border-color: $primary-color;
 
 
 

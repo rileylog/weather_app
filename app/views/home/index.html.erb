@@ -1,20 +1,18 @@
-<div class='jumbotron' >
-  <h1> <center><span class="label label-primary-color">Simple Weather</span></center> </h1>
+<div class="page-header">
+  <h1><b>Simple Weather </b><small> Click on the map anywhere you want to get the current weather at that location or search for a location.</small></h1>
 </div>
 <div class='post-tile col-xs-12 col-sm-6 col-md-6 no-gutters' >
-  <h3> <center><span class="label label-default">Click Anywhere on Planet Earth for the Current Weather</span></center></h3>
   <br />
   <div id="googleMap"></div>
 </div>
 
 <div class='post-tile col-xs-12 col-sm-6 col-md-6 no-gutters' >
-  <h3> <center><span class="label label-default">Search for weather by location</span></center></h3>
   <br />
   <div class='row'>
-    <div class='col-xs-8'>
+    <div class='col-xs-7'>
       <input class="form-control" id="address" type="textbox" placeholder="Input a city/state">
     </div>
-    <div class='col-xs-4'>
+    <div class='col-xs-5'>
       <input type="button" class='btn btn-primary' value="Get Weather" onclick="codeAddress()">
     </div>  
   </div>
@@ -24,7 +22,7 @@
     <br />
     <br />
     <div id='weather_div' >
-      <iframe id="forecast_embed" type="text/html" frameborder="0" height="245px" width="100%" src="http://forecast.io/embed/#lat=<%= latitude %>&lon=<%= longitude %>&name=<%= @ip_info['city'] %>&color=#A6A6A0&font=Helvetica"> </iframe>
+      <iframe id="forecast_embed" type="text/html" frameborder="0" height="245px" width="100%" src="http://forecast.io/embed/#lat=<%= latitude %>&lon=<%= longitude %>&name=<%= @ip_info['city'] %>&font=Helvetica"> </iframe>
     </div>
   <% end %>
 </div>
