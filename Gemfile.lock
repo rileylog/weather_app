@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: 1b2f5af46531ce0560d10f77e72e229e6a0c4856
+  revision: 51792c7924372fc0c8789bc849f82e09041e1218
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0)
@@ -98,7 +98,7 @@ GEM
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    jquery-ui-rails (4.1.0)
+    jquery-ui-rails (4.1.1)
       railties (>= 3.1.0)
     json (1.8.1)
     kaminari (0.15.0)
@@ -131,7 +131,7 @@ GEM
       activesupport (= 3.2.15)
       bundler (~> 1.0)
       railties (= 3.2.15)
-    rails_layout (0.5.6)
+    rails_layout (0.5.8)
     railties (3.2.15)
       actionpack (= 3.2.15)
       activesupport (= 3.2.15)

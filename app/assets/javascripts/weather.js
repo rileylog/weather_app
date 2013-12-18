@@ -1,4 +1,3 @@
-// var marker;
 var map;
 var geocoder;
 var address;
@@ -123,27 +122,13 @@ function addPoint(event) {
   clearOverlays();
   console.log (event)
   var latlngpoint = event.latLng;
-  // main_marker = new google.maps.Marker({
-  //   position: latlngpoint,
-  //   map: window.map
-  // })
-  // main_marker = marker;
+
   var url = 'http://forecast.io/embed/#';
   var latitude_param = latlngpoint.nb;
   var longitude_param = latlngpoint.ob;
-  // var weather_div = $('#weather_div');
-  // var new_iframe = $('<iframe></iframe>');
+
   var latlng = new google.maps.LatLng(latlngpoint.nb, latlngpoint.ob);
   create_new_iframe(latitude_param, longitude_param, null);
-  // var create_new_iframe = function(){
-  //   weather_div.html('');
-  //   new_iframe.attr('type','text/html');
-  //   new_iframe.attr('frameborder','0');
-  //   new_iframe.attr('height','245px');
-  //   new_iframe.attr('width','100%');
-  //   new_iframe.attr('src',url+latitude_param+'&'+longitude_param+'&name='+city_name);
-  //   weather_div.html(new_iframe);
-  // };
 
   geocoder.geocode({'latLng': latlng}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
